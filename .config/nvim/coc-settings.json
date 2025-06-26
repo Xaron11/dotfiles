@@ -1,0 +1,9 @@
+{
+    "languageserver": {
+        "omnisharp": {
+          "command": "/home/xaron/.cache/omnisharp-vim/omnisharp-roslyn/run",
+          "filetypes": ["cs"],
+          "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
+        }
+    }
+}
