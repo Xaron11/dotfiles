@@ -1,0 +1,13 @@
+[user]
+	name = Xaron11
+	email = kaczmarzykdawid4@gmail.com
+[core]
+	autocrlf = input
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = main
