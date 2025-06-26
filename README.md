@@ -25,12 +25,25 @@ This repository contains my personal configuration files (dotfiles) for setting 
 - **Init**
   - `.xinitrc`
  
+- **Keybinds**
+  - `.config/sxhkd/sxhkdrc`
+
+- **Window Manager**
+  - `.config/awesome/`
+
+ - **Status Bar**
+ - `.config/awesome/` (*NEW*)
+ - ~~`.config/polybar/`~~ (*OLD*)
+ 
 - **Appearance**
   - `.Xresources`
   - `.gtkrc-2.0`
   - `.fonts.conf`
+  - `.config/picom/picom.conf`
+  - `.config/rofi/config.rasi`
 
 - **Others**
+  - `.config/fastfetch/config.jsonc` (fastfetch)
   - `.alsoftrc` (OpenAL)
   - `.eslintrc.json` (ESLint)
   - `.tool-versions` (asdf)
