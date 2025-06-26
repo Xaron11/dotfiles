@@ -38,10 +38,12 @@ This repository contains my personal configuration files (dotfiles) for setting 
  
 - **Appearance**
   - `.Xresources`
-  - `.gtkrc-2.0`
+  - `.config/Kvantum/`
   - `.fonts.conf`
-  - `.config/picom/picom.conf`
-  - `.config/rofi/config.rasi`
+  - `.gtkrc-2.0`, `.config/gtk-2.0/`, `.config/gtk-3.0/`, `.config/gtk-4.0/` (GTK)
+  - `.config/qt5ct/` (Qt)
+  - `.config/picom/picom.conf` (picom)
+  - `.config/rofi/config.rasi` (rofi)
 
 - **Others**
   - `.config/fastfetch/config.jsonc` (fastfetch)
