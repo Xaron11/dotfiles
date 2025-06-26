@@ -1,0 +1,4 @@
+super + alt + @t
+	tdrop -ma -w 70% -x 15% -y $(($PANEL_HEIGHT + 10)) alacritty
+super + bracketleft
+	rofi -show combi -combi-modes 'window,run,drun,ssh,keys,filebrowser' -modes combi
