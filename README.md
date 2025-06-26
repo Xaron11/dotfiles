@@ -31,9 +31,9 @@ This repository contains my personal configuration files (dotfiles) for setting 
 - **Window Manager**
   - `.config/awesome/`
 
- - **Status Bar**
- - `.config/awesome/` (*NEW*)
- - ~~`.config/polybar/`~~ (*OLD*)
+- **Status Bar**
+  - `.config/awesome/` (*NEW*)
+  - ~~`.config/polybar/`~~ (*OLD*)
  
 - **Appearance**
   - `.Xresources`
