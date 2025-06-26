@@ -29,7 +29,8 @@ This repository contains my personal configuration files (dotfiles) for setting 
   - `.config/sxhkd/sxhkdrc`
 
 - **Window Manager**
-  - `.config/awesome/`
+  - `.config/awesome/` (based on: [Awesome Copycats](https://github.com/lcpz/awesome-copycats) by [@lcpz](https://github.com/lcpz))
+  ###### *Requires*: awesome-freedesktop, lain, deficient
 
 - **Status Bar**
   - `.config/awesome/` (*NEW*)
