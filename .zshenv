@@ -11,6 +11,7 @@ path+=("$HOME/.config/yarn/global/node_modules/.bin")
 path+=("$HOME/development/flutter/bin")
 path+=("$HOME/.dotnet/tools")
 path+=("/opt/cuda/bin")
+path+=("$(go env GOPATH)/bin")
 export PATH
 
 
@@ -27,4 +28,4 @@ export QT_STYLE_OVERRIDE=kvantum
 
 export PANEL_HEIGHT=24
 
-
+export LIBVIRT_DEFAULT_URI=qemu:///system

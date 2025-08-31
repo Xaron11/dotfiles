@@ -86,6 +86,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -94,6 +96,8 @@ export LC_ALL=en_US.UTF-8
 
 setxkbmap pl
 setxkbmap -option caps:swapescape
+
+bindkey -v
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -137,6 +141,20 @@ eval "$(zoxide init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+source ~/.zplug/init.zsh
+
+zplug "jeffreytse/zsh-vi-mode"
+
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load --verbose
 
 # bun completions
 [ -s "/home/xaron/.local/share/reflex/bun/_bun" ] && source "/home/xaron/.local/share/reflex/bun/_bun"
