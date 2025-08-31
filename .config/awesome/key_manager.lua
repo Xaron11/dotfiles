@@ -102,12 +102,14 @@ local function get_global_keys()
             end,
             { description = "lua execute prompt", group = "awesome" }),
         -- Menubar
-        awful.key({ modkey, "Mod1" }, "u", function()
+        awful.key({ modkey }, "d", function()
                 menubar.show()
             end,
             { description = "show the menubar", group = "launcher" }),
         -- Screenshot
-        awful.key({ modkey, "Shift" }, "Print", function() awful.spawn.with_shell("scrot -s - | xclip -selection clipboard -t image/png") end, {description = "Takes screenshot of selection", group="awesome"})
+        awful.key({ modkey, "Shift" }, "Print", function() awful.spawn.with_shell("scrot -s - | xclip -selection clipboard -t image/png") end, {description = "Takes screenshot of selection", group="awesome"}),
+        -- Powermenu
+        awful.key({ modkey, "Shift" }, "e", function() awful.spawn.with_shell("powermenu.sh") end, {description = "Show powermenu", group="awesome"})
     )
     return globalkeys
 end
@@ -120,7 +122,7 @@ function key_manager.get_client_keys()
                 c:raise()
             end,
             { description = "toggle fullscreen", group = "client" }),
-        awful.key({ modkey, "Shift" }, "c", function(c) c:kill() end,
+        awful.key({ modkey }, "q", function(c) c:kill() end,
             { description = "close", group = "client" }),
         awful.key({ modkey, "Control" }, "space", awful.client.floating.toggle,
             { description = "toggle floating", group = "client" }),
