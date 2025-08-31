@@ -1,7 +1,7 @@
 export ASDF_DATA_DIR="$HOME/.asdf"
 
 typeset -U path PATH
-path+=("$ASDF_DATA_DIR/shims")
+path+=("${ASDF_DATA_DIR:-$HOME/.asdf}/shims")
 path+=("$HOME/.local/bin") 
 path+=("$HOME/Scripts")
 path+=("$HOME/Packages/stripe-cli")
@@ -12,6 +12,7 @@ path+=("$HOME/development/flutter/bin")
 path+=("$HOME/.dotnet/tools")
 path+=("/opt/cuda/bin")
 path+=("$(go env GOPATH)/bin")
+path+=("$QLTY_INSTALL/bin")
 export PATH
 
 
