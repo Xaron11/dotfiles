@@ -1,13 +1,89 @@
 [user]
 	name = Xaron11
 	email = me@xaron11.dev
+
 [core]
-	autocrlf = input
+  autocrlf = input
+  editor = nvim
+
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+  
 [init]
 	defaultBranch = main
+
+[alias]
+  # Aliases can be used after `git` to make issuing frequent easier.
+  # For example, to add a Signed-Off note to the last commit, use this alias and call `git si`
+  sign = commit --amend -s --no-edit
+
+  amend = commit --amend
+  amend-no-edit = commit --amend --no-edit
+
+  fe = fetch
+  st = status
+  ad = add
+  ap = add -p
+  ch = checkout
+  cm = commit
+  br = branch
+  df = diff
+  dfs = diff --staged
+  res = restore --staged
+  lg = log --oneline --graph --all --decorate
+  stat = log --stat
+
+  pushforce = push --force-with-lease
+
+  sup = submodule update --recursive
+  supi = submodule update --init --recursive
+
+  rb = rebase
+  rbi = rebase -i
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbs = rebase --skip
+
+  # You can also use more complicated flows. For example, call `git suclean` to clean this
+  # repo and all submodules to pristine state
+  suclean = "!g() { git clean -ffxd; git submodule foreach --recursive 'git clean -ffxd'; }; g"
+
+[color]
+  ui = auto
+
+[diff]
+  # Add a list of commits added to submodule when showing a diff of a commit
+  submodule = log
+
+  # Specify a tool to be called with `git difftool`
+  tool = meld
+
+[difftool]
+  # Do not ask for confirmation before running difftool
+  prompt = false
+
+[commit]
+  # Shows a diff of the current commit in the editor window when running `git commit`
+  verbose = true
+
+[rerere]
+  # Enable reuse of recorded conflict resolution - super useful if you rebase a lot.
+  # See `git help rerere`
+  enabled = 1
+  autoupdate = true
+
+[status]
+  # List all commits of changed submodules when running `git status`
+  submoduleSummary = -1
+
+[submodule]
+  # Download submodules with unlimited paralelism
+  fetchJobs = 0
+
+[rebase]
+  # If you do `git rebase --interactive`, warn when you accidentally drop a commit
+  missingCommitsCheck = warn
