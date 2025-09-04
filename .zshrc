@@ -70,26 +70,57 @@ else
 fi
 
 #####################################
-# 🎨 Aliases
+# 🔧 Oh My Zsh Core
 #####################################
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
+ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-alias zshconfig="vim ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Oh My Zsh plugins (core + ones included in OMZ)
+plugins=(
+  archlinux
+  git
+  z
+  dirhistory
+  history
+  man
+  systemd
+  ufw
+  tmux
+  urltools
+  common-aliases
+)
 
-alias vim="nvim"
-alias ls="eza"
-alias la="eza -la"
-
-alias ghc="gh copilot suggest"
-alias anifetch='python3 ~/Repos/anifetch/anifetch.py --fast-fetch -W 80 -H 40 -f ~/Repos/anifetch/example.mp4 -c "--symbols braille --fg-only"'
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+source $ZSH/oh-my-zsh.sh
 
 #####################################
-# Completions
+# 🔌 Zplug (external plugins)
 #####################################
+
+# Initialize zplug
+source ~/.zplug/init.zsh
+
+# External plugins
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2   # must load last
+zplug "Aloxaf/fzf-tab"
+zplug "jeffreytse/zsh-vi-mode", if:"[[ -z $NVIM ]]"
+
+# Install if missing
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Load zplug plugins
+zplug load
+
+#####################################
+# 🛠 Completions
+#####################################
+
 # Case-insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
@@ -99,7 +130,13 @@ zstyle ':completion:*' menu no
 # CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"
 
-fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/tmuxinator/completions $fpath)
+fpath=(
+  ${ASDF_DATA_DIR:-$HOME/.asdf}/completions
+  ${ZSH_CUSTOM:-$ZSH/custom}/plugins/zsh-completions/src
+  ${ZSH_CUSTOM:-$ZSH/custom}/plugins/tmuxinator/completions
+  $fpath
+)
+
 autoload -Uz compinit && compinit
 eval "$(register-python-argcomplete pipx)"
 
@@ -107,31 +144,25 @@ eval "$(register-python-argcomplete pipx)"
 [ -s "/home/xaron/.local/share/reflex/bun/_bun" ] && source "/home/xaron/.local/share/reflex/bun/_bun"
 
 #####################################
-# 🔌 Plugins & Frameworks
+# 🎨 Aliases
 #####################################
 
-# Zplug (plugin manager)
-source ~/.zplug/init.zsh
+alias grep='grep --color=auto'
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-# Plugins (Oh My Zsh + external)
-plugins=(git zsh-autosuggestions z command-not-found copyfile copybuffer copypath jsontools dirhistory history archlinux common-aliases man systemd ufw urltools tmux zsh-syntax-highlighting)
+alias zshconfig="vim ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Oh My Zsh (load after plugin manager)
-source $ZSH/oh-my-zsh.sh
+alias vim="nvim"
+unalias ls
+alias ls="eza"
+unalias ll
+alias ll="eza -l"
+unalias la
+alias la="eza -la"
 
-# Zplug extra plugins
-zplug 'Aloxaf/fzf-tab'
-zplug "jeffreytse/zsh-vi-mode", if:"[[ -z $NVIM ]]"
-
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-zplug load
+alias ghc="gh copilot suggest"
+alias anifetch='python3 ~/Repos/anifetch/anifetch.py --fast-fetch -W 80 -H 40 -f ~/Repos/anifetch/example.mp4 -c "--symbols braille --fg-only"'
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 #####################################
 # 🎭 Prompt & UI
