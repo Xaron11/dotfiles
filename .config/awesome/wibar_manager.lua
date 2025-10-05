@@ -172,19 +172,19 @@ function wibar_manager.create_wibar(s, mymainmenu)
     )
 
     -- Battery widget
-    local battery_widget = deficient.battery_widget {
-        ac_prefix = "󱊦 ",
-        battery_prefix = "󱊣",
-        widget_text = "${AC_BAT} ${percent}%"
-    }
+    -- local battery_widget = deficient.battery_widget {
+    --     ac_prefix = "󱊦 ",
+    --     battery_prefix = "󱊣",
+    --     widget_text = "${AC_BAT} ${percent}%"
+    -- }
 
     -- Volume Control
-    local volumecfg = deficient.volume_control({
-        widget_text = {
-            on  = '󰕾 % 3d%% ',        -- three digits, fill with leading spaces
-            off = '󰖁 % 3d%% ',
-        }
-    })
+    -- local volumecfg = deficient.volume_control({
+    --     widget_text = {
+    --         on  = '󰕾 % 3d%% ',        -- three digits, fill with leading spaces
+    --         off = '󰖁 % 3d%% ',
+    --     }
+    -- })
 
     -- Systray
     local systray = wibox.widget.systray()
@@ -220,10 +220,9 @@ function wibar_manager.create_wibar(s, mymainmenu)
                 color = "#888888",
             },
         centered_systray,  -- Place the systray in the center
-            volumecfg,
             {
                 layout = wibox.layout.fixed.horizontal,
-                battery_widget
+                -- battery_widget
             },
             {
                 layout = wibox.layout.fixed.horizontal,
