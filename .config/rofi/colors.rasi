@@ -1,0 +1,21 @@
+/* colors */
+
+* {
+  alpha:  #00000000;
+  /* Background */
+  bg:  #242424FF;  // Dark gray
+  bg-alt:  #292929FF;  // Slightly lighter dark gray
+  /* Foreground */
+  fg:  #E1E1E1FF;  // Light gray
+  fg-alt:  #93A1A1FF;  // Muted light gray
+  /* Text */
+  highlight:  #FFFFFFFF;  // White
+  /* Selection */
+  selected:  #33B8E8FF;  // Bright blue
+  selected-text:  #414141FF;  // Gray
+  /* Accent */
+  border:  #212121FF;  // Very dark gray
+  error:  #D12F2CFF;  // Red
+  success:  #33FF00FF;  // Green
+  warning:  #FFFF00FF;  // Yellow
+}
