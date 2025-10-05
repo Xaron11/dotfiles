@@ -19,3 +19,6 @@ vim.api.nvim_create_autocmd("RecordingLeave", {
     vim.notify("Stopped recording")
   end,
 })
+
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])

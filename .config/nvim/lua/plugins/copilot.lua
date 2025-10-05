@@ -5,14 +5,14 @@ return {
     opts = {
       suggestion = {
         enabled = true,
-        -- hide_during_completion = false,
-        -- auto_trigger = true,
+        -- hide_during_completion = true,
+        -- auto_trigger = false,
         keymap = {
-          accept = "<C-j>",
-          -- accept_word = "<C-J>",
+          accept = "<C-J>",
+          accept_line = "<C-j>",
           dismiss = "<C-k>",
-          -- next = "<M-]>",
-          -- prev = "<M-[>",
+          next = "<M-]>",
+          prev = "<M-[>",
         },
       },
       panel = {
@@ -20,21 +20,6 @@ return {
       },
       filetypes = {
         ["*"] = true,
-      },
-      -- This disables full-line completions
-      -- copilot_node_command = "node", -- Ensure node is set correctly
-      server_opts_overrides = {
-        settings = {
-          telemetry = {
-            telemetryLevel = "off", -- Disable telemetry
-          },
-          -- advanced = {
-          --   listCount = 1, -- Only show one suggestion
-          --   inlineSuggest = true,
-          --   disableAutoCompletions = false,
-          --   disableFullLineCompletions = true,
-          -- },
-        },
       },
     },
   },
