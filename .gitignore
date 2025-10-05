@@ -1,0 +1,95 @@
+# Ignore everything
+*
+*/
+
+
+# Except the following files and directories
+
+# .config/
+!.config/
+
+# .config/<directories>/
+!.config/alacritty/
+!.config/alacritty/*
+!.config/autostart/
+!.config/autostart/*
+!.config/awesome/
+!.config/awesome/*
+# All in awesome
+!.config/awesome/**
+!.config/btop/
+!.config/btop/*
+!.config/fastfetch/
+!.config/fastfetch/*
+!.config/featherpad/
+!.config/featherpad/*
+!.config/gtk-*/
+!.config/gtk-*/*
+!.config/i3/
+!.config/i3/*
+# All in i3
+!.config/i3/**
+!.config/Kvantum/
+!.config/Kvantum/*
+!.config/neofetch/
+!.config/neofetch/*
+!.config/nvim/
+!.config/nvim/*
+# All in nvim
+!.config/nvim/**
+!.config/picom/
+!.config/picom/*
+!.config/polybar/
+!.config/polybar/*
+!.config/qt5ct/
+!.config/qt5ct/*
+!.config/qutebrowser/
+# Only config.py in qutebrowser
+!.config/qutebrowser/config.py
+!.config/rofi/
+!.config/rofi/*
+!.config/sxhkd/
+!.config/sxhkd/*
+!.config/Thunar/
+# Only uca.xml in Thunar
+!.config/Thunar/uca.xml
+!.config/xsettingsd/
+!.config/xsettingsd/*
+!.config/yazi/
+!.config/yazi/*
+
+# ~/.<files>
+!.alsoftrc
+!.bash_logout
+!.bash_profile
+!.bashrc
+!.eslintrc.json
+!.fonts.conf
+!.gitconfig
+!.gitignore
+!.gtkrc*
+!.p10k.zsh
+!.profile
+!.tmux.conf
+!.tool-versions
+!.xinitrc
+!.xprofile
+!.Xresources
+!.zshenv
+!.zshrc
+!.zshrc.*
+
+# ~/<directories>/
+!icons/
+!icons/*
+!rofi/
+!rofi/*
+!Scripts/
+!Scripts/*
+
+# ~/<files>
+!dolphinrc
+!katerc
+!README.md
+!startkderc
+
