@@ -12,7 +12,7 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
-  
+
 [init]
 	defaultBranch = main
 
@@ -21,7 +21,7 @@
   # For example, to add a Signed-Off note to the last commit, use this alias and call `git si`
   sign = commit --amend -s --no-edit
 
-  amend = commit --amend
+  amend = commit --amend -m
   amend-no-edit = commit --amend --no-edit
 
   fe = fetch
@@ -29,7 +29,7 @@
   ad = add
   ap = add -p
   ch = checkout
-  cm = commit
+  cm = commit -m
   br = branch
   df = diff
   dfs = diff --staged
