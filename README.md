@@ -16,7 +16,7 @@ This repository contains my personal configuration files (dotfiles) for setting 
   - `.gitconfig`
 
 - **Vim Editor**
-  - `.config/.nvim/`
+  - `.config/nvim/` (current: custom LazyVim setup, previously: minimal Vim configuration)
   - `.vim/`
 
 - **Terminal**
@@ -25,15 +25,17 @@ This repository contains my personal configuration files (dotfiles) for setting 
 - **Init**
   - `.xinitrc`
  
-- **Keybinds**
+- **System Keybinds** (not much used now)
   - `.config/sxhkd/sxhkdrc`
 
 - **Window Manager**
-  - `.config/awesome/` (based on: [Awesome Copycats](https://github.com/lcpz/awesome-copycats) by [@lcpz](https://github.com/lcpz))
+  - `.config/i3/` (**NEW**)
+  - ~~`.config/awesome/`~~ (based on: [Awesome Copycats](https://github.com/lcpz/awesome-copycats) by [@lcpz](https://github.com/lcpz)) (*OUTDATED*)
   ###### *Requires*: awesome-freedesktop, lain, deficient
 
 - **Status Bar**
-  - `.config/awesome/` (*NEW*)
+  - `.config/i3/i3blocks.conf` (**NEW**)
+  - ~~`.config/awesome/`~~ (*OUTDATED*)
   - ~~`.config/polybar/`~~ (*OLD*)
  
 - **Appearance**
@@ -43,7 +45,12 @@ This repository contains my personal configuration files (dotfiles) for setting 
   - `.gtkrc-2.0`, `.config/gtk-2.0/`, `.config/gtk-3.0/`, `.config/gtk-4.0/` (GTK)
   - `.config/qt5ct/` (Qt)
   - `.config/picom/picom.conf` (picom)
-  - `.config/rofi/config.rasi` (rofi)
+
+- **Rofi Menus**
+  - `.config/rofi/`
+
+- **Scripts**
+  - `.Scripts/` (custom scripts)
 
 - **Others**
   - `.config/fastfetch/config.jsonc` (fastfetch)
