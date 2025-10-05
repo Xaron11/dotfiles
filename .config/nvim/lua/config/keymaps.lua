@@ -15,7 +15,7 @@ vim.keymap.set("n", "<Left>", "<Nop>", { silent = true })
 vim.keymap.set("n", "<Right>", "<Nop>", { silent = true })
 
 -- Code Companion
-vim.keymap.set({ "n", "v" }, "<C-b>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<M-b>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "<Leader>a", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
 vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
 
