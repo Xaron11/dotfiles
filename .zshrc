@@ -26,7 +26,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='nvim'
 
 # Enable tmux autostart
-ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART=false
 
 # bun
 export BUN_INSTALL="$HOME/.local/share/reflex/bun"
@@ -170,9 +170,8 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # Starship (better prompt, faster than oh-my-zsh themes)
 # eval "$(starship init zsh)"
 
-# Swap caps/escape
-setxkbmap -option caps:swapescape
-setxkbmap pl
+# Layout pl, Swap caps/escape
+setxkbmap -layout pl -option caps:swapescape
 
 # Powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
