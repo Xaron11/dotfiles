@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1697112482944821-1</unique-id>
+	<command>alacritty --working-directory %f</command>
+	<description>Open Terminal Here</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>kdeconnect</icon>
+	<name>KDEConnect Share</name>
+	<submenu></submenu>
+	<unique-id>1759671092952463-1</unique-id>
+	<command>~/Scripts/kdeconnect_share.sh %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+</action>
+</actions>
