@@ -1,2 +1,2 @@
 export QT_STYLE_OVERRIDE=kvantum
-setxkbmap pl
+setxkbmap -layout pl -option caps:swapescape
