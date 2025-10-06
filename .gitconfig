@@ -5,6 +5,7 @@
 [core]
   autocrlf = input
   editor = nvim
+  whitespace = error
 
 [credential "https://github.com"]
 	helper = 
@@ -12,6 +13,9 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+
+[url "git@github.com:"]
+  insteadOf = "gh:"
 
 [init]
 	defaultBranch = main
@@ -25,7 +29,7 @@
   amend-no-edit = commit --amend --no-edit
 
   fe = fetch
-  st = status
+  st = status --short
   ad = add
   ap = add -p
   ch = checkout
@@ -35,6 +39,7 @@
   dfs = diff --staged
   res = restore --staged
   lg = log --oneline --graph --all --decorate
+  l = log --graph --all --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n'
   stat = log --stat
 
   pushforce = push --force-with-lease
@@ -59,12 +64,23 @@
   # Add a list of commits added to submodule when showing a diff of a commit
   submodule = log
 
-  # Specify a tool to be called with `git difftool`
-  tool = meld
+  context = 3
+  renames = copies
+  interHunkContext = 10
+
+[pager]
+  diff = diff-so-fancy | $PAGER
+
+[diff-so-fancy]
+  markEmptyLines = false
 
 [difftool]
   # Do not ask for confirmation before running difftool
   prompt = false
+
+[interactive]
+  diffFilter = diff-so-fancy --patch
+  singleKey = true
 
 [commit]
   # Shows a diff of the current commit in the editor window when running `git commit`
@@ -79,6 +95,8 @@
 [status]
   # List all commits of changed submodules when running `git status`
   submoduleSummary = -1
+  branch = true
+  showStash = true
 
 [submodule]
   # Download submodules with unlimited paralelism
@@ -87,3 +105,9 @@
 [rebase]
   # If you do `git rebase --interactive`, warn when you accidentally drop a commit
   missingCommitsCheck = warn
+
+[push]
+  autoSetupRemote = true
+
+[pull]
+  rebase = true
