@@ -82,14 +82,9 @@
 # ~/<directories>/
 !icons/
 !icons/*
-!rofi/
-!rofi/*
 !Scripts/
 !Scripts/*
 
 # ~/<files>
-!dolphinrc
-!katerc
 !README.md
-!startkderc
 
