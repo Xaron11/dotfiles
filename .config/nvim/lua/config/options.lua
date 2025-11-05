@@ -15,3 +15,5 @@ vim.g.copilot_lsp_settings = { -- disable copilot telemetry
     telemetryLevel = "off",
   }
 }
+
+vim.g.vimtex_view_method = 'zathura'
