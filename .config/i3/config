@@ -29,7 +29,7 @@ font pango: JetBrains Mono Nerd Regular 10
 set $mod Mod4
 
 # swap CAPSLOCK and ESC
-exec --no-startup-id setxkbmap -option caps:swapescape
+exec --no-startup-id setxkbmap -layout pl -option caps:swapescape
 
 #####################
 # workspace layout: #
