@@ -24,20 +24,20 @@ This repository contains my personal configuration files (dotfiles) for setting 
 
 - **Init**
   - `.xinitrc`
- 
+
 - **System Keybinds** (not much used now)
   - `.config/sxhkd/sxhkdrc`
 
 - **Window Manager**
   - `.config/i3/` (**NEW**)
   - ~~`.config/awesome/`~~ (based on: [Awesome Copycats](https://github.com/lcpz/awesome-copycats) by [@lcpz](https://github.com/lcpz)) (*OUTDATED*)
-  ###### *Requires*: awesome-freedesktop, lain, deficient
+    *Requires*: awesome-freedesktop, lain, deficient
 
 - **Status Bar**
   - `.config/i3/i3blocks.conf` (**NEW**)
   - ~~`.config/awesome/`~~ (*OUTDATED*)
   - ~~`.config/polybar/`~~ (*OLD*)
- 
+
 - **Appearance**
   - `.Xresources`
   - `.config/Kvantum/`
@@ -77,6 +77,7 @@ dotfiles config --local status.showUntrackedFiles no
 dotfiles checkout
 ```
 To make the alias permanent, add this to your .bashrc or .zshrc:
+
 ```bash
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
