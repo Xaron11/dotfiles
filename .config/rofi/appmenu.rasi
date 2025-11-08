@@ -1,13 +1,13 @@
 /*******************************************************
- * ROFI configs i3 keyhint-menu for EndeavourOS
+ * ROFI configs i3 Apps menu for EndeavourOS
  * Maintainer: joekamprad [joekamprad //a_t// endeavouros.com]
  *******************************************************/
 
 configuration {
     font:               "JetBrains Mono Nerd Font 10";
-    show-icons:         false;
+    show-icons:         true;
     icon-theme:         "Papirus Dark";
-    display-drun:       "KeyHint";
+    display-drun:       "Apps";
     drun-display-format: "{name}";
     disable-history:    false;
     fullscreen:         false;
@@ -23,7 +23,7 @@ window {
     text-color:         @fg;
     border:             0px;
     border-radius:      0px;
-    width:              700px;
+    width:              350px;
     location:           center;
     x-offset:           0;
     y-offset:           0;
@@ -31,7 +31,7 @@ window {
     transparency:       "real";
 }
 
-/* Main container */
+/* Mainbox */
 mainbox {
     background-color:   @bg;
     text-color:         @fg;
@@ -39,10 +39,10 @@ mainbox {
     border-radius:      0px;
     padding:            5px;
     spacing:            5px;
-    children:           [ inputbar, message, listview ];
+    children:           [ inputbar, listview ];
 }
 
-/* Inputbar (header section) */
+/* Inputbar */
 inputbar {
     children:           [ textbox-prompt-colon, entry ];
     background-color:   @alpha;
@@ -55,34 +55,26 @@ inputbar {
 }
 
 textbox-prompt-colon {
-    expand:             false;
-    str:                "";  /* Keyboard icon */
-    text-color:         @selected;
+    expand:     false;
+    str:        "";  /* Apps icon */
+    text-color: @selected;
     background-color:   @bg;
-    padding:            0px 15px 0px 0px;
+    padding:    0px 15px 0px 0px;
 }
 
+/* Entry field */
 entry {
     background-color:   @alpha;
     text-color:         @fg;
     placeholder-color:  @fg-alt;
-    placeholder:        "Search keybindings...";
+    placeholder:        "Search apps...";
     expand:             true;
-    padding:            0px;
+    padding:            0px 0px 0px 0px;
     horizontal-align:   0;
     blink:              true;
 }
 
-/* Message box (optional hint area) */
-message {
-    background-color:   @alpha;
-    text-color:         @fg-alt;
-    border:             0px 0px 1px 0px;
-    border-color:       @border;
-    padding:            5px 10px;
-}
-
-/* Keybinding list */
+/* Listview */
 listview {
     background-color:   @alpha;
     text-color:         @fg;
@@ -96,13 +88,23 @@ listview {
     layout:             vertical;
 }
 
-/* Keybinding elements */
+/* Elements */
 element {
     background-color:   @bg-alt;
     text-color:         @fg;
     border-radius:      0px;
-    padding:            4px 0px 4px 0px;
+    padding:  0px  0px  0px  0px;
     orientation:        horizontal;
+}
+
+element-icon {
+    size:               24px;
+    border:             0px;
+    margin:             0px;
+    padding:            5px;
+    spacing:            0px;
+    background-color:   @bg;
+    text-color:         @fg;
 }
 
 element-text {
@@ -112,12 +114,11 @@ element-text {
     horizontal-align:   0;
     vertical-align:     0.5;
     margin:             0px;
-    padding:            5px 10px;
+    padding:            5px;
 }
 
 element selected {
     background-color:   @selected;
-    text-color:         @fg;
 }
 
 /* Scrollbar */
