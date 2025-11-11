@@ -1,0 +1,131 @@
+configuration {
+    font:               "JetBrains Mono Nerd Font 10";
+    show-icons:         true;
+    icon-theme:         "Papirus Dark";
+    display-drun:       "Apps";
+    drun-display-format: "{name}";
+    disable-history:    false;
+    fullscreen:         false;
+    sidebar-mode:       false;
+    scroll-method:      0;
+}
+
+@import "~/.config/rofi/colors.rasi"
+
+/* Window styling */
+window {
+    background-color:   @bg;
+    text-color:         @fg;
+    border:             0px;
+    border-radius:      0px;
+    width:              700px;
+    location:           center;
+    x-offset:           0;
+    y-offset:           0;
+    padding:            0px;
+    transparency:       "real";
+}
+
+/* Mainbox */
+mainbox {
+    background-color:   @bg;
+    text-color:         @fg;
+    border:             0px;
+    border-radius:      0px;
+    padding:            5px;
+    spacing:            5px;
+    children:           [ inputbar, listview ];
+}
+
+/* Inputbar */
+inputbar {
+    children:           [ textbox-prompt-colon, prompt, entry ];
+    background-color:   @alpha;
+    text-color:         @fg;
+    border:             0px 0px 1px 0px;
+    border-color:       @border;
+    border-radius:      0px;
+    padding:            10px;
+    spacing:            0px;
+}
+
+textbox-prompt-colon {
+    expand:     false;
+    str:        "";
+    text-color: @selected;
+    background-color:   @bg;
+    padding:    0px 15px 0px 0px;
+}
+
+prompt  {
+  enabled:  true;
+  padding:  0px  15px  0px  0px;
+  background-color:  @bg;
+  text-color:  @fg;
+}
+
+/* Entry field */
+entry {
+    background-color:   @alpha;
+    text-color:         @fg;
+    placeholder-color:  @fg-alt;
+    expand:             true;
+    padding:            0px 0px 0px 0px;
+    horizontal-align:   0;
+    blink:              true;
+}
+
+/* Listview */
+listview {
+    background-color:   @alpha;
+    text-color:         @fg;
+    padding:            0px;
+    spacing:            5px;
+    border:             0px;
+    lines:              10;
+    columns:            1;
+    cycle:              true;
+    dynamic:            true;
+    layout:             vertical;
+}
+
+/* Elements */
+element {
+    background-color:   @bg-alt;
+    text-color:         @fg;
+    border-radius:      0px;
+    padding:  0px  0px  0px  0px;
+    orientation:        horizontal;
+}
+
+element-icon {
+    size:               24px;
+    border:             0px;
+    margin:             0px;
+    padding:            5px;
+    spacing:            0px;
+    background-color:   @bg;
+    text-color:         @fg;
+}
+
+element-text {
+    expand:             true;
+    background-color:   @bg-alt;
+    text-color:         @fg;
+    horizontal-align:   0;
+    vertical-align:     0.5;
+    margin:             0px;
+    padding:            5px;
+}
+
+element selected {
+    background-color:   @selected;
+}
+
+/* Scrollbar */
+scrollbar {
+    width:              4px;
+    handle-color:       @fg-alt;
+    border:             0px;
+    padding:            0px;
+}
