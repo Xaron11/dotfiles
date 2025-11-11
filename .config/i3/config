@@ -242,11 +242,13 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym $mod+p exec --no-startup-id ~/.config/i3/scripts/audio-device-switch
 
 ## App shortcuts
-bindsym $mod+w exec --no-startup-id qutebrowser
+bindsym $mod+t exec --no-startup-id qutebrowser
 bindsym $mod+n exec --no-startup-id thunar
-bindsym Print exec --no-startup-id scrot ~/Screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Screenshots/$(date +"%Y-%m-%d-%T")-screenshot.png"
+bindsym Alt+Print exec --no-startup-id scrot ~/Screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Screenshots/$(date +"%Y-%m-%d-%T")-screenshot.png"
+bindsym Print exec --no-startup-id scrot -s ~/Screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Screenshots/$(date +"%Y-%m-%d-%T")-screenshot.png"
 bindsym Shift+Print exec --no-startup-id scrot -s -e 'xclip -selection clipboard -t image/png < $f && rm $f && notify-send "Screenshot copied to clipboard"'
 bindsym Control+Print exec --no-startup-id flameshot gui -p ~/Screenshots && notify-send "Flameshot: Screenshot saved"
+bindsym Control+Shift+Print exec --no-startup-id flameshot gui -c && notify-send "Flameshot: Screenshot copied to clipboard"
 
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
