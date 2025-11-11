@@ -57,6 +57,10 @@
 !.config/xsettingsd/*
 !.config/yazi/
 !.config/yazi/*
+!.config/flameshot/
+!.config/flameshot/*
+!.config/dunst/
+!.config/dunst/*
 
 # ~/.<files>
 !.alsoftrc
@@ -78,6 +82,10 @@
 !.zshenv
 !.zshrc
 !.zshrc.*
+
+# ~/.local/share/qutebrowser/userscripts/
+!.local/share/qutebrowser/userscripts/
+!.local/share/qutebrowser/userscripts/*
 
 # ~/<directories>/
 !icons/
