@@ -164,6 +164,8 @@ alias ghc="gh copilot suggest"
 alias anifetch='python3 ~/Repos/anifetch/anifetch.py --fast-fetch -W 80 -H 40 -f ~/Repos/anifetch/example.mp4 -c "--symbols braille --fg-only"'
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+alias tx="tmuxinator"
+
 #####################################
 # 🎭 Prompt & UI
 #####################################
