@@ -21,8 +21,6 @@
 !.config/btop/*
 !.config/fastfetch/
 !.config/fastfetch/*
-!.config/featherpad/
-!.config/featherpad/*
 !.config/gtk-*/
 !.config/gtk-*/*
 !.config/i3/
