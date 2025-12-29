@@ -24,9 +24,14 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Default editor
 export EDITOR='nvim'
+# Default shell
+export SHELL='zsh'
 
 # Enable tmux autostart
 ZSH_TMUX_AUTOSTART=false
+
+# Chrome Executable (for Flutter)
+export CHROME_EXECUTABLE="/usr/bin/chromium"
 
 # bun
 export BUN_INSTALL="$HOME/.local/share/reflex/bun"
@@ -149,10 +154,12 @@ eval "$(register-python-argcomplete pipx)"
 
 alias grep='grep --color=auto'
 
-alias zshconfig="vim ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="nvim ~/.zshrc"
+alias i3config="nvim ~/.config/i3/config"
 
 alias vim="nvim"
+alias v="nvim"
+alias sv="sudoedit"
 unalias ls
 alias ls="eza"
 unalias ll
@@ -206,3 +213,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
