@@ -26,7 +26,7 @@
   sign = commit --amend -s --no-edit
 
   amend = commit --amend -m
-  amend-no-edit = commit --amend --no-edit
+  amendno = commit --amend --no-edit
 
   fe = fetch
   st = status --short
@@ -37,10 +37,14 @@
   br = branch
   df = diff
   dfs = diff --staged
-  res = restore --staged
-  lg = log --oneline --graph --all --decorate
-  l = log --graph --all --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n'
-  stat = log --stat
+  res = restore
+  rest = restore --staged
+  lgg = log --oneline --graph --all --decorate
+  lgo = log --graph --all --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n'
+  lgs = log --stat
+  rth = reset --hard
+  rts = reset --soft
+  rt = reset
 
   pushforce = push --force-with-lease
 
@@ -111,3 +115,5 @@
 
 [pull]
   rebase = true
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
