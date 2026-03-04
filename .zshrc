@@ -6,6 +6,45 @@
 #####################################
 
 # Environment variables
+export ASDF_DATA_DIR="$HOME/.asdf"
+
+typeset -U path PATH
+path+=("${ASDF_DATA_DIR:-$HOME/.asdf}/shims")
+path+=("$HOME/.local/bin") 
+path+=("$HOME/Scripts")
+path+=("$HOME/Packages/stripe-cli")
+path+=("$HOME/.cargo/bin")
+path+=("$HOME/.yarn/bin")
+path+=("$HOME/.config/yarn/global/node_modules/.bin")
+path+=("$HOME/development/flutter/bin")
+path+=("$HOME/.dotnet/tools")
+path+=("$HOME/.local/share/gem/ruby/3.4.0/bin")
+path+=("/opt/cuda/bin")
+path+=("$(go env GOPATH)/bin")
+path+=("$QLTY_INSTALL/bin")
+path+=("/opt/sonar-scanner/bin")
+export PATH
+
+
+export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
+
+export PYTHON_HOST_PROG="$HOME/.asdf/shims/python"
+export PYTHON3_HOST_PROG="$HOME/.asdf/shims/python"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
+export ANDROID_HOME="/opt/android-sdk/"
+
+export QT_STYLE_OVERRIDE=kvantum
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+export GTK_USE_PORTAL=1
+
+export STYLO_FORCE_DARK=1
+
+export PANEL_HEIGHT=24
+
+export LIBVIRT_DEFAULT_URI=qemu:///system
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -25,7 +64,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Default editor
 export EDITOR='nvim'
 # Default shell
-export SHELL='zsh'
+export SHELL='/usr/bin/zsh'
 
 # Enable tmux autostart
 ZSH_TMUX_AUTOSTART=false
@@ -35,7 +74,7 @@ export CHROME_EXECUTABLE="/usr/bin/chromium"
 
 # bun
 export BUN_INSTALL="$HOME/.local/share/reflex/bun"
-export PATH="$BUN_INSTALL/bin:$PATH"aa:
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 #####################################
 # 📜 History
