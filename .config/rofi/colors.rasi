@@ -11,7 +11,7 @@
   /* Text */
   highlight:  #FFFFFFFF;  // White
   /* Selection */
-  selected:  #33B8E8FF;  // Bright blue
+  selected:  #5294E2FF;  // Bright blue
   selected-text:  #414141FF;  // Gray
   /* Accent */
   border:  #212121FF;  // Very dark gray
