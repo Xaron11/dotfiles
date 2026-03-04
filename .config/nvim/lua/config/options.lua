@@ -13,7 +13,20 @@ vim.g.copilot_no_tab_map = true -- disable copilot tab mapping
 vim.g.copilot_lsp_settings = { -- disable copilot telemetry
   telemetry = {
     telemetryLevel = "off",
-  }
+  },
 }
 
-vim.g.vimtex_view_method = 'zathura'
+vim.g.vimtex_view_method = "zathura"
+
+vim.opt.sessionoptions = {
+  "globals",
+  "tabpages",
+  "buffers",
+  "curdir",
+  "winsize",
+  "terminal",
+  "help",
+  "skiprtp",
+  "folds",
+  "localoptions",
+}
