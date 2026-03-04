@@ -2,7 +2,7 @@
 
 # Define rates per application (WM_CLASS)
 declare -A rates
-rates=( ["qutebrowser"]="201 25" ["otherapp"]="400 20" )
+rates=( ["qutebrowser"]="201 25" ["librewolf"]="201 25" )
 
 default_rate="660 25"
 
