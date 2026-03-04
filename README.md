@@ -4,22 +4,19 @@ This repository contains my personal configuration files (dotfiles) for setting 
 
 ## 📦 What's Included
 
-- **Shell**
+- **Shell** (Zsh)
   - `.bashrc`, `.zshrc`
   - `.profile`, `.bash_profile`
-  - `.zshenv`
-  - `.zshrc.pre-oh-my-zsh`
   - `.zshrc.zni`
   - `.p10k.zsh`
 
 - **Git**
-  - `.gitconfig`
+  - `.config/git/config`
 
-- **Vim Editor**
+- **Neovim Editor**
   - `.config/nvim/` (current: custom LazyVim setup, previously: minimal Vim configuration)
-  - `.vim/`
 
-- **Terminal**
+- **Terminal** (Alacritty)
   - `.config/alacritty/alacritty.toml`
 
 - **Init**
@@ -43,7 +40,7 @@ This repository contains my personal configuration files (dotfiles) for setting 
   - `.config/Kvantum/`
   - `.fonts.conf`
   - `.gtkrc-2.0`, `.config/gtk-2.0/`, `.config/gtk-3.0/`, `.config/gtk-4.0/` (GTK)
-  - `.config/qt5ct/` (Qt)
+  - `.config/qt5ct/`, `.config/qt6ct` (Qt)
   - `.config/picom/picom.conf` (picom)
 
 - **Rofi Menus**
@@ -54,8 +51,8 @@ This repository contains my personal configuration files (dotfiles) for setting 
 
 - **Others**
   - `.config/fastfetch/config.jsonc` (fastfetch)
+  - `.config/btop/btop.conf` (btop)
   - `.alsoftrc` (OpenAL)
-  - `.eslintrc.json` (ESLint)
   - `.tool-versions` (asdf)
   - `.config/` for other apps
 
