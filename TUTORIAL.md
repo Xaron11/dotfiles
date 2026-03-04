@@ -96,6 +96,7 @@
 
 - `gpg` - CLI, encryption/signing
 - `ssh-keygen` - CLI, generate SSH keys
+- `ssh-agent` - SSH key agent
 - `ssh-add` - CLI, manage SSH keys
 
 - `gnome-keyring` - key management system
@@ -229,6 +230,7 @@
 
 - `nvim` (LazyVim) - TUI, Vim-like, highly customizable, plugins, code completion, text search, git integration, LSP support, formatter, linter, file explorer, terminal, AI code completion & chat
 - `VSCode` - GUI, extensions, git integration, LSP support, formatter, linter, file explorer, terminal, AI agent
+- `Antigravity` - GUI, VSCode-like, AI agents, vibe coding
 
 ### Version Control
 
@@ -248,7 +250,7 @@
 
 ### Infrastructure
 
-- `opentofu` - infrastructure as code tool
+- `opentofu` - cloud infrastructure as code tool
 
 ## Window/Workspace Management
 
@@ -302,7 +304,7 @@
 
 ### Status Bar Indicators
 
-- Network status: `iwgtk` (Wi-Fi, GUI), `iwctl` (Wi-Fi, TUI) - connect/disconnect, view networks
+- Network status: `iwgtk` (Wi-Fi, GUI) - connect/disconnect, view networks
 - Volume: `pavucontrol` (GUI) - adjust volume, input/output devices; mute/unmute (right-click); volume control (scroll)
 - Power profile: `powerprofilesctl` (CLI) - view/switch power profiles, `scripts/power-profiles` (GUI) - rofi menu for power profiles
 - Power menu: `rofi/powermenu.sh` (GUI) - rofi menu for power options
@@ -312,6 +314,7 @@
 - Battery/Power: `powerkit` (GUI) - battery status, screen brightness
 - Bluetooth: `blueman` (GUI) - manage Bluetooth devices
 - Screenshot: `flameshot` (GUI) - screenshot tool
+- Network: `networkmanager-applet` (GUI) - NetworkManager applet for managing network connections
 
 ## Power Management
 
@@ -329,3 +332,16 @@
 - `amixer` - CLI, ALSA mixer
 
 - `Super+P` - switch audio output devices
+
+## Networking
+
+- `nmcli` - CLI, NetworkManager command line tool
+- `nmtui` - TUI, NetworkManager text user interface
+
+- `iwgtk` (Wi-Fi, GUI) - connect/disconnect, view networks
+- `iwctl` (Wi-Fi, TUI) - manage wireless connections
+
+## Audio Control
+
+- `pavucontrol` - GUI, PulseAudio volume control
+- `amixer` - CLI, ALSA mixer
